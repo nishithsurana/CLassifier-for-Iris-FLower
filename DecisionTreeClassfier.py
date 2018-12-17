@@ -9,15 +9,16 @@ def decode(num):
             print("Versicolor")
         else:
             print("virginica")
+#---------------------------------------------------------------------------------------------------------------------------------
 iris=load_iris()
 test_ids=[]
 for i in range(0,20):
     test_ids.append(i)
 for i in range(50,70):
     test_ids.append(i)
-for i in range (100,170):
+for i in range (100,120):
     test_ids.append(i)
-
+#Training Data
 train_data =np.delete(iris.data,test_ids,axis=0)
 train_target =np.delete(iris.target , test_ids)
 
